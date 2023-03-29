@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Página de búsqueda de películas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Página de búsqueda de películas</h1>
+    <div class="search-container">
+    <input type="text" placeholder="Buscar películas...">
+    <button type="button" onclick="searchMovies()">Buscar</button>
+    </div>
+    <div class="filter-container">
+    <label for="rating-filter">Filtrar por calificación de usuario:</label>
+    <input type="range" min="0" max="10" value="0" id="rating-filter" onchange="filterMoviesByRating()">
+    <span id="rating-value"></span>
+    </div>
+</header>
+<main>
+    <section class="movies-container">
+    <h2>Resultados de búsqueda:</h2>
+    <ul class="movies-list"></ul>
+    </section>
+    <section class="movie-details-container">
+    <h2>Detalles de la película:</h2>
+    <div class="movie-details"></div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
